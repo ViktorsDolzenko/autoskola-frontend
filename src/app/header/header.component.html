@@ -1,0 +1,31 @@
+<div class="container header">
+  <ul class="languages">
+    <li (click)="changeSelectedCountryCode('lv')">{{"latvian" | translate}}</li>
+    <li (click)="changeSelectedCountryCode('ru')">{{"russian" | translate}}</li>
+  </ul>
+  <div class="menu">
+  <div class="image-container-logo">
+    <img src="assets/images/autobravo-logo.svg" >
+  </div>
+  <ul fxHide fxShow.gt-md>
+    <li><a href="#ourTeam">{{"ourTeam" | translate}}</a></li>
+    <li><a href="#prices">{{"prices" | translate}}</a></li>
+    <li><a href="#apply">{{"apply" | translate}}</a></li>
+    <li><a href="#contacts">{{"contacts" | translate}}</a></li>
+  </ul>
+  </div>
+    <div class="burger-container">
+      <button class="burger-btn" mat-icon-button fxHide.gt-md (click)="showToolbarMenu()">
+        <mat-icon>
+          menu
+        </mat-icon>
+      </button>
+    </div>
+
+  <mat-list *ngIf="bShowToolbarMenu" [@inOutAnimation] fxHide.gt-md class="header__nav container">
+    <mat-list-item><a href="#ourTeam">{{"ourTeam" | translate}}</a></mat-list-item>
+    <mat-list-item><a href="#prices">{{"prices" | translate}}</a></mat-list-item>
+    <mat-list-item><a href="#apply">{{"apply" | translate}}</a></mat-list-item>
+    <mat-list-item><a href="#contacts">{{"contacts" | translate}}</a></mat-list-item>
+  </mat-list>
+</div>

@@ -1,0 +1,17 @@
+<div *ngFor="let schedule of schedules$ | async" class="card" style="width: 15rem;">
+  <div class="card-header">
+    <div class="text-center">{{schedule.dayType | translate}}</div>
+    <div class="text-center">{{schedule.from | date:'HH:mm'}}-{{schedule.to | date:'HH:mm'}}</div>
+    <div class="text-center">
+    <span *ngFor="let weekDay of schedule.weekDays; let i = index">
+      {{weekDay | translate}} {{i === schedule.weekDays.length -1 ? '' : '/' }}
+    </span>
+    </div>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{schedule.address}}</li>
+    <li class="list-group-item">{{schedule.from | date:'d.MM.YYYY'}}</li>
+    <li class="list-group-item">{{schedule.language}}</li>
+    <li class="list-group-item">{{schedule.lessonsCount}} {{'lessons' | translate}}</li>
+  </ul>
+</div>

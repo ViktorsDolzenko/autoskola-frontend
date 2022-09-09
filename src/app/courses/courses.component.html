@@ -1,0 +1,7 @@
+<div *ngFor="let course of courses$ | async; index as i; last as isLast">
+  <div class="course">
+    <div>{{language === "lv" ? course.nameLv : course.nameRu}}</div>
+    <div>{{course.price}}</div>
+  </div>
+<hr *ngIf="!isLast" style="border-top: 1px SOLID; opacity: 100%"/>
+</div>

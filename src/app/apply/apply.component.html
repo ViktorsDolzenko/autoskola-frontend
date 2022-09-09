@@ -1,0 +1,17 @@
+<div class="form-container">
+  <div>
+  <h1>{{"applyHeader" | translate}}</h1>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="sendMessage()">
+    <div class="fields">
+    <input placeholder="{{'name' | translate}}" type="text" formControlName="name" required>
+    <input placeholder="{{'phone' | translate}}" type="tel" formControlName="tel" required>
+    </div>
+    <div class="apply-btn-container">
+    <button type="submit" class="btn">{{"leaveRequest" | translate}}</button>
+    </div>
+  </form>
+  <div class="women-container">
+  <img src="assets/images/women.svg" alt="women" width="200" height="390">
+  </div>
+</div>
