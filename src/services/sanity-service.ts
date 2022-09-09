@@ -50,7 +50,7 @@ export class SanityService {
       this.wnd.location.href.startsWith(environment.web.url) ||
       this.wnd.location.href.startsWith('http://localhost:4200')
         ? `https://${projectId}.api.sanity.io/`
-        : `${this.wnd.location.origin}/api/`
+        : `${environment.web.url}/api/`
 
     return `${baseUrl}${apiVersion}/data/query/${dataset}?query=`
   }
