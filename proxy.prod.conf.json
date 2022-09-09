@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://neon-sable-684157.netlify.app",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
