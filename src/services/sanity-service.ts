@@ -44,16 +44,19 @@ export class SanityService {
   }
 
   private generateSanityUrl(): string {
-    const { apiVersion, dataset, projectId } = this.clientConfig
+      const config = {
+        projectId: environment.sanity.projectId,
+        dataset: environment.sanity.dataset,
+        apiVersion: this.getApiVersion()
+      };
 
-    const baseUrl =
-      this.wnd.location.href.startsWith(environment.web.url) ||
-      this.wnd.location.href.startsWith('http://localhost:4200')
-        ? `https://${projectId}.api.sanity.io/`
-        : `${environment.web.url}/api/`
+      let baseUrl = `${window.location.origin}/api/`;
+      if (window.location.href.startsWith(environment.web.url) || window.location.href.startsWith('http://localhost:4200')) {
+        baseUrl = `https://${environment.sanity.projectId}.api.sanity.io/`;
+      }
+      return `${baseUrl}${config.apiVersion}/data/query/${config.dataset}?query=`;
+    }
 
-    return `${baseUrl}${apiVersion}/data/query/${dataset}?query=`
-  }
 
   private getApiVersion(): string {
     return `v${new Date().toISOString().split('T')[0]}`
