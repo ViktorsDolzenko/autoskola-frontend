@@ -25,7 +25,7 @@ export class ApplyComponent implements OnInit {
     if(this.form.invalid) {
      return
     }
-     this.http.post("https://adorable-figolla-676654.netlify.app/.netlify/functions/app", {
+     this.http.post("api/mail", {
       name: this.form.controls.name.value,
       tel: this.form.controls.tel.value
     }, {withCredentials: true}).subscribe();
