@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://0ypps6d2.api.sanity.io",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

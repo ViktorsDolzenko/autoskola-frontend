@@ -6,6 +6,6 @@ export const environment = {
     useCdn: true,
   },
   web: {
-    url: 'https://neon-sable-684157.netlify.app',
+    url: 'https://super-muffin-0b9263.netlify.app/',
   },
 };
