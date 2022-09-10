@@ -41,7 +41,6 @@ export class HeaderComponent implements OnInit {
   constructor(
     private translateService: TranslateService,
     private router: Router,
-    private viewportScroller: ViewportScroller
   ) {
   }
 
