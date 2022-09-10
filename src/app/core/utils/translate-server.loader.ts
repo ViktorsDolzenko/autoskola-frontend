@@ -20,7 +20,7 @@ export class TranslateServerLoader implements TranslateLoader {
       const assetsFolder = join(
         process.cwd(),
         'dist',
-        'beautypoint-universal', // Your project name here
+        'autobravo', // Your project name here
         'browser',
         'assets',
         this.prefix

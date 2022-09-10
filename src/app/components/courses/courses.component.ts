@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {Observable} from "rxjs";
 import {SanityService} from "../../../services/sanity-service";
 
@@ -9,8 +9,11 @@ import {SanityService} from "../../../services/sanity-service";
 })
 export class CoursesComponent{
 
-  public language = localStorage.getItem('lang') || 'lv';
   public courses$: Observable<any>
+
+  get lang() {
+    return localStorage.getItem('lang') || 'lv';
+  }
 
   constructor(private sanityService: SanityService ) {
     this.courses$ = this.sanityService.fetch<any[]>(

@@ -4,7 +4,7 @@ import {NgModule} from "@angular/core";
 import {RulesComponent} from "./components/rules/rules.component";
 
 const routes: Routes = [
-  { path: '', component: MainComponent, pathMatch: 'full'},
+  { path: '', component: MainComponent},
   { path: 'rules', component: RulesComponent}
 ];
 
