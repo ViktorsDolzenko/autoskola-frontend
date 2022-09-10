@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import {animate, style, transition, trigger} from "@angular/animations";
+import {PageScrollService} from "ngx-page-scroll-core";
+import {DOCUMENT, ViewportScroller} from "@angular/common";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -36,8 +39,11 @@ export class HeaderComponent implements OnInit {
   public bShowToolbarMenu = false;
 
   constructor(
-    private translateService: TranslateService
-  ) { }
+    private translateService: TranslateService,
+    private router: Router,
+    private viewportScroller: ViewportScroller
+  ) {
+  }
 
   ngOnInit(): void {
     this.selectedCountryCode = localStorage.getItem('lang') || 'lv';
@@ -55,5 +61,9 @@ export class HeaderComponent implements OnInit {
 
   public clickedOutside(): void {
     this.bShowToolbarMenu = false;
+  }
+
+  onScrollTo(location: string){
+    setTimeout(() => { this.router.navigate(['/'], { fragment: location }); }, 300);
   }
 }

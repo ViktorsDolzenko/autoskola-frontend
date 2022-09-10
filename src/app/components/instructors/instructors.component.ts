@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from "rxjs";
-import {SanityService} from "../../services/sanity-service";
+import {SanityService} from "../../../services/sanity-service";
 
 @Component({
   selector: 'app-instructors',

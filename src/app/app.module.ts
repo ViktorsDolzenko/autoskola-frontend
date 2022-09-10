@@ -3,16 +3,16 @@ import {BrowserModule, TransferState, ɵgetDOM} from '@angular/platform-browser'
 
 import { AppComponent } from './app.component';
 import { SanityImagePipe } from './pipes/sanity-image.pipe';
-import { InstructorsComponent } from './instructors/instructors.component';
+import { InstructorsComponent } from './components/instructors/instructors.component';
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/layout/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MainComponent } from './main/main.component';
-import { CategoriesImagesComponent } from './categories-images/categories-images.component';
+import { MainComponent } from './components/main/main.component';
+import { CategoriesImagesComponent } from './components/categories-images/categories-images.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from "@angular/material/icon";
-import { CoursesComponent } from './courses/courses.component';
-import { ScheduleComponent } from './schedule/schedule.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { ScheduleComponent } from './components/schedule/schedule.component';
 import {LanguageInterceptor} from "./interceptors/langauge.interceptor";
 import {DOCUMENT, isPlatformBrowser} from "@angular/common";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
@@ -21,14 +21,15 @@ import {translateBrowserLoaderFactory} from "./core/utils/translate-browser.load
 import {NgxPageScrollCoreModule} from "ngx-page-scroll-core";
 import {NgxPageScrollModule} from "ngx-page-scroll";
 import {AppRoutingModule} from "./app-routing.module";
-import { ApplyComponent } from './apply/apply.component';
+import { ApplyComponent } from './components/apply/apply.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatListModule} from "@angular/material/list";
 import {ClickOutsideDirective} from "./directives/click-outside.directive";
+import { RulesComponent } from './components/rules/rules.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -46,7 +47,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ScheduleComponent,
     ApplyComponent,
     FooterComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    RulesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -55,8 +57,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     NgbModule,
     BrowserAnimationsModule,
-    NgxPageScrollCoreModule,
-    NgxPageScrollModule,
+    NgxPageScrollCoreModule.forRoot({ duration: 1600 }),
     MatIconModule,
     FlexLayoutModule,
     MatToolbarModule,

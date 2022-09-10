@@ -30,6 +30,4 @@ export class AppComponent implements OnInit{
       { name: 'date', content: '2022-09-10', scheme: 'YYYY-MM-DD' },
       { charset: 'UTF-8' },]);
   }
-
-
 }

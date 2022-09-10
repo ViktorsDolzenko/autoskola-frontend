@@ -28,6 +28,6 @@ export class ApplyComponent implements OnInit {
      this.http.post("https://adorable-figolla-676654.netlify.app/.netlify/functions/app", {
       name: this.form.controls.name.value,
       tel: this.form.controls.tel.value
-    }).subscribe();
+    }, {withCredentials: true}).subscribe();
  }
 }

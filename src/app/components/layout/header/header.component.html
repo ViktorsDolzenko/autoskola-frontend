@@ -5,13 +5,14 @@
   </ul>
   <div class="menu">
   <div class="image-container-logo">
-    <img src="assets/images/autobravo-logo.svg" >
+    <a [routerLink]="['/']"><img src="../../../../assets/images/autobravo-logo.svg" ></a>
   </div>
   <ul fxHide fxShow.gt-md>
-    <li><a href="#ourTeam">{{"ourTeam" | translate}}</a></li>
-    <li><a href="#prices">{{"prices" | translate}}</a></li>
-    <li><a href="#apply">{{"apply" | translate}}</a></li>
-    <li><a href="#contacts">{{"contacts" | translate}}</a></li>
+    <li><a (click)="onScrollTo('outTeam')">{{"ourTeam" | translate}}</a></li>
+    <li><a (click)="onScrollTo('prices')">{{"prices" | translate}}</a></li>
+    <li><a (click)="onScrollTo('apply')">{{"apply" | translate}}</a></li>
+    <li><a (click)="onScrollTo('contacts')">{{"contacts" | translate}}</a></li>
+    <li><a [routerLink]="['/rules']">{{"rules" | translate}}</a></li>
   </ul>
   </div>
     <div class="burger-container">

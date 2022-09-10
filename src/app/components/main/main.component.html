@@ -10,15 +10,15 @@
   </div>
   </div>
   <div class="image">
-    <img src="assets/images/audi-a3.png">
+    <img src="../../../assets/images/audi-a3.png">
   </div>
 </div>
 <div class="container ourTeam-container">
   <h1 id="ourTeam" class="text-center mt-5 fw-bold fs-2">{{"ourTeam" | translate}}</h1>
   <h2 class="text-center mt-4 mb-5">{{"instructors" | translate}}</h2>
   <app-instructors></app-instructors>
-  <div class="mt-6 d-flex flex-column">
-    <h1 id="prices" class="text-center fw-bold fs-2">{{"prices" | translate}}</h1>
+  <div id="prices" class="mt-6 d-flex flex-column">
+    <h1 class="text-center fw-bold fs-2">{{"prices" | translate}}</h1>
     <div class="d-flex justify-content-between align-items-center mt-5">
     <div class="d-flex align-items-center mt-4">
      <mat-icon class="icon-book">receipt_long</mat-icon>
@@ -36,7 +36,7 @@
   <div class="background"></div>
   <app-schedule class="schedule"></app-schedule>
 </div>
-<div class="container apply-container">
-  <app-apply id="apply"></app-apply>
+<div id="apply" class="container apply-container">
+  <app-apply></app-apply>
 </div>
 <app-footer id="contacts"></app-footer>
