@@ -5,7 +5,7 @@
   <form [formGroup]="form" (ngSubmit)="sendMessage()">
     <div class="fields">
     <input placeholder="{{'name' | translate}}" type="text" formControlName="name" required>
-    <input placeholder="{{'phone' | translate}}" type="tel" formControlName="tel" required>
+    <input placeholder="{{'phone' | translate}}" type="text" formControlName="tel" required>
     </div>
     <div class="apply-btn-container">
     <button type="submit" class="btn">{{"leaveRequest" | translate}}</button>

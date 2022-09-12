@@ -19,7 +19,6 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {translateBrowserLoaderFactory} from "./core/utils/translate-browser.loader";
 import {NgxPageScrollCoreModule} from "ngx-page-scroll-core";
-import {NgxPageScrollModule} from "ngx-page-scroll";
 import {AppRoutingModule} from "./app-routing.module";
 import { ApplyComponent } from './components/apply/apply.component';
 import {ReactiveFormsModule} from "@angular/forms";
@@ -30,6 +29,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatListModule} from "@angular/material/list";
 import {ClickOutsideDirective} from "./directives/click-outside.directive";
 import { RulesComponent } from './components/rules/rules.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -63,6 +63,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatToolbarModule,
     MatMenuModule,
     MatListModule,
+    MatSnackBarModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
