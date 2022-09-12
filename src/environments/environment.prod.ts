@@ -6,6 +6,7 @@ export const environment = {
     useCdn: true,
   },
   web: {
-    url: 'https://super-muffin-0b9263.netlify.app/',
+    url: 'http://autoskolabravo.lv/',
+    urlHttps: 'https://autoskolabravo.lv/'
   },
 };

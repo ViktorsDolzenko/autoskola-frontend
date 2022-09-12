@@ -51,7 +51,7 @@ export class SanityService {
       };
 
       let baseUrl = `${window.location.origin}/api/`;
-      if (window.location.href.startsWith(environment.web.url) || window.location.href.startsWith('http://localhost:4200')) {
+      if (window.location.href.startsWith(environment.web.url) || window.location.href.startsWith('http://localhost:4200') || window.location.href.startsWith(environment.web.urlHttps) ) {
         baseUrl = `https://${environment.sanity.projectId}.api.sanity.io/`;
       }
       return `${baseUrl}${config.apiVersion}/data/query/${config.dataset}?query=`;
