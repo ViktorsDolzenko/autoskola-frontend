@@ -1,6 +1,6 @@
 <div *ngFor="let instructor of instructors$ | async" class="instructors">
   <div class="background"></div>
-  <div>
+  <div class="instructor">
     <h1>{{instructor.name}}</h1>
     <div class="instructor-info"> {{"categories" | translate}} : <app-categories-images [categories]="instructor.categories"></app-categories-images></div>
     <div class="instructor-info"> {{"transport" | translate}} : {{instructor.transport}} ({{instructor.price}} EUR/AKAD. ST.)</div>

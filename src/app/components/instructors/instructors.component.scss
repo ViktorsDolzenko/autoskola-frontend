@@ -20,8 +20,8 @@
 .background {
   position: absolute;
   top: 0;
-  left: 140px;
-  right: 140px;
+  left: 110px;
+  right: 100px;
   bottom: 0;
   background-color: #EDEDED;
   filter: blur(14px);
@@ -44,4 +44,16 @@ h1 {
 
 .image-container {
   margin: 20px 0;
+
+  img {
+    width: 150px;
+    height: 200px
+  }
+}
+
+.instructor {
+  width: 620px;
+  @media (max-width: 850px) {
+    width: 500px;
+  }
 }
