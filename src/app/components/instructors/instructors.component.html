@@ -5,7 +5,7 @@
     <div class="instructor-info"> {{"categories" | translate}} : <app-categories-images [categories]="instructor.categories"></app-categories-images></div>
     <div class="instructor-info"> {{"transport" | translate}} : {{instructor.transport}} ({{instructor.price}} EUR/AKAD. ST.)</div>
     <div class="instructor-info"> {{"locationStart" | translate}} : {{instructor.location}}</div>
-    <div class="instructor-info"> {{"language" | translate}} : {{instructor.languages}}</div>
+    <div class="instructor-info"> {{"language" | translate}} : {{instructor.languages.length > 1 ? instructor.languages.join('/') : instructor.languages }}</div>
   </div>
   <div class="image-container">
     <img src="{{instructor.photo | sanityImage}}" width="300" height="200">
