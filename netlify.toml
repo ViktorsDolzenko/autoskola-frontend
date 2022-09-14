@@ -13,3 +13,10 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  buildDir = "dist"
+  baseUrl = "https://autoskolabravo.lv"
