@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
         name: 'keywords',
         content: 'Autoskola, Autobravo, braukšana, csdd, autoskolabravo, autoskola bravo',
       },
-      { name: 'descriptions', content: 'AutoBravo autoskola A, B Kategorija'},
+      { name: 'description', content: 'AutoBravo autoskola A, B Kategorija'},
       { name: 'robots', content: 'index, follow' },
       { name: 'author', content: 'Viktors Dolzenko' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
