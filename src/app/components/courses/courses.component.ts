@@ -20,7 +20,8 @@ export class CoursesComponent{
       `*[_type == "courses"]{
         nameLv,
         nameRu,
-        price
+        price,
+        newPrice
       }`
     )
   }
