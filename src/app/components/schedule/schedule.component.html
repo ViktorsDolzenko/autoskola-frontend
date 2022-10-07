@@ -1,4 +1,4 @@
-<div *ngFor="let schedule of schedules$ | async" class="card" style="width: 15rem;">
+<div *ngFor="let schedule of schedules$ | async | orderBy: 'from'" class="card" style="width: 15rem;">
   <div class="card-header">
     <div class="text-center">{{schedule.dayType | translate}}</div>
     <div class="text-center">{{schedule.from | date:'HH:mm'}}-{{schedule.to | date:'HH:mm'}}</div>
